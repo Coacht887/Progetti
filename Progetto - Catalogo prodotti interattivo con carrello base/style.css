@@ -1,24 +1,174 @@
+/* Stili di base */
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 20px;
-}
-header {
-    text-align: center;
-    margin-bottom: 20px;
-    background-color:lightpink;
-    ; 
-}
-nav ul {
-    list-style-type: none; /* Rimuove i puntini elenco */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end; /* Allinea a destra */
-    gap: 15px; /* Spazio tra i link */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Sezione prodotti */
+section {
+  flex: 1;
+  min-width: 60%;
+}
+
+section h2 {
+  text-align: center;
+}
+
+
+.search-box {
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Catalogo prodotti */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.prodotto {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.prodotto img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
+}
+
+.prodotto button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.prodotto button:hover {
+  background-color: #218838;
+}
+
+/* Carrello */
+#carrello {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#carrello div {
+  margin-bottom: 8px;
+}
+
+#totale {
+  font-weight: bold;
+}
+
+#checkoutButton,
+#clearCartButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#checkoutButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+#checkoutButton:hover {
+  background-color: #0056b3;
+}
+
+#clearCartButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+#clearCartButton:hover {
+  background-color: #c82333;
+}
+
+.checkout-message {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  margin-top: 20px;
+}
+
+/* -----------------------
+   MOBILE RESPONSIVE
+--------------------------*/
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #carrello {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .catalogo {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
 }
