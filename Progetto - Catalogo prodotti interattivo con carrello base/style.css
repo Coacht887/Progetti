@@ -1,0 +1,24 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color:lightpink;
+    ; 
+}
+nav ul {
+    list-style-type: none; /* Rimuove i puntini elenco */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Allinea a destra */
+    gap: 15px; /* Spazio tra i link */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}

@@ -110,5 +110,10 @@ function ricercaProdotti() {
   );
   mostraProdotti(risultati);
 }
+// Tasti interazione
+checkoutButton.addEventListener("click", checkout);
+clearCartButton.addEventListener("click", svuotaCarrello);
+searchInput.addEventListener("input", ricercaProdotti);
+
 // Avvio iniziale
 mostraProdotti(productCatalog);
