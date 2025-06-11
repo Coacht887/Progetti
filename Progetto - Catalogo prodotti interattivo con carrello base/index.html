@@ -1,20 +1,49 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Catalogo Prodotti con Carrello</title>
-<link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo prodotti interattivo con carrello base</title>
+    <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
 
-<h1>Catalogo Prodotti</h1>
+    <header>
+        <h1>Catalogo Prodotti </h1>
+        <p>Benvenuto nel nostro catalogo prodotti! Aggiungi i tuoi articoli preferiti al carrello.</p>
+        <nav>
+            <ul>
+            <li><a href="#products">Prodotti</a></li>
+            <li><a href="#cart">Carrello</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Ricerca -->
+        <input type="text" id="searchInput" placeholder="Cerca Prodotti...">
+        <section>
+            <h2>Prodotti Disponibili</h2>
+            <div id="catalogo" class="catalogo"></div>
+        </section>
 
-<div id="productContainer"></div>
+    <!--Carrello-->
+    <section>
+        <h2>Carrello</h2>
+        <div id="carrello" class="carrello"></div>
+        <p><strong>Totale:</strong> €<span id="totale">0</span></p>
+        <button id="checkoutButton">Procedi al Checkout</button>
+        <div id="checkoutMessage" class="checkout-message"></div>
+        <button id="clearCartButton">Svuota Carrello</button>
 
-<h2>Carrello</h2>
-<div id="cartContainer"></div>
-<p id="total">Totale: € 0.00</p>
+    </section>
+ </main>
+ <footer>
+    <p>&copy; 2023 Catalogo Prodotti. Tutti i diritti riservati.</p>
+    <p>Realizzato con passione da Tony Cordone</p>
+ </footer>
+  
+   
 
 <script src="app.js"></script>
 </body>
