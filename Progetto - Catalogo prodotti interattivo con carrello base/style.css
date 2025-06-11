@@ -7,6 +7,7 @@ body {
 }
 
 header {
+  position: relative; /* permette il posizionamento assoluto dei figli */
   background-color: #333;
   color: white;
   padding: 20px 0;
@@ -42,6 +43,11 @@ main {
   margin-bottom: 20px;
 }
 
+section h2 {
+  text-align: center;
+}
+
+
 /* Sezione prodotti */
 section {
   flex: 1;
@@ -50,18 +56,16 @@ section {
 
 
 .search-box {
-  display: flex;
-  justify-content: flex-start;
-  
+  position: absolute;
+  top: 10px;
+  left: 20px;
 }
 
-
-#searchInput {
-  height: 50px;
-  width: 100px; /* o qualunque larghezza fissa desideri */
-  max-width: 100%;
-  padding: 10px;
-  font-size: 10px;
+.search-box input {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 14px;
+  width: 180px;
 }
 
 
@@ -123,9 +127,9 @@ aside {
 
 #checkoutButton,
 #clearCartButton {
-  display: block;
-  width: 100%;
-  padding: 10px;
+   display: inline-block;
+  width: auto; 
+  padding: 10px 15px;
   margin-top: 10px;
   font-size: 16px;
   cursor: pointer;
