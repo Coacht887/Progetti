@@ -76,7 +76,7 @@ function aggiungiAlCarrello(id) {
 function aggiornaCarrello() {
   carrelloDiv.innerHTML = "";
   let totale = 0;
-  carrello.forEach((item, index) => {
+  carrello.forEach((item) => {
     totale += item.prezzo;
     const div = document.createElement("div");
     div.textContent = `${item.nome} - €${item.prezzo.toFixed(2)}`;
